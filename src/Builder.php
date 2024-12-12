@@ -246,7 +246,7 @@ class Builder
             ];
 
             $name = FormStepServiceProvider::instance()->getName();
-            return view($name.'.form-step::completion-page', $data);
+            return view($name.'::completion-page', $data);
         });
     }
 
@@ -468,7 +468,7 @@ JS;
     protected function initForm()
     {
         $name = FormStepServiceProvider::instance()->getName();
-        $this->form->builder()->view($name.'.form-step::steps');
+        $this->form->builder()->view($name.'::steps');
 
         $this->form->builder()->addVariables(['steps' => $this]);
 
